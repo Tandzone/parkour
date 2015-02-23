@@ -1,0 +1,57 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/tanjona/Documents/WORKS/Frameworks/cocos2d-js-v3.2/Parkour/linux-build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1068386917/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1068386917.dir/build.make CMakeFiles/cmTryCompileExec1068386917.dir/build
+make[1]: Entering directory '/home/tanjona/Documents/WORKS/Frameworks/cocos2d-js-v3.2/Parkour/linux-build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/tanjona/Documents/WORKS/Frameworks/cocos2d-js-v3.2/Parkour/linux-build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1068386917.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -std=c99    -o CMakeFiles/cmTryCompileExec1068386917.dir/CheckSymbolExists.c.o   -c /home/tanjona/Documents/WORKS/Frameworks/cocos2d-js-v3.2/Parkour/linux-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec1068386917
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1068386917.dir/link.txt --verbose=1
+/usr/bin/cc  -std=c99     CMakeFiles/cmTryCompileExec1068386917.dir/CheckSymbolExists.c.o  -o cmTryCompileExec1068386917 -rdynamic 
+CMakeFiles/cmTryCompileExec1068386917.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec1068386917.dir/build.make:88: recipe for target 'cmTryCompileExec1068386917' failed
+make[1]: Leaving directory '/home/tanjona/Documents/WORKS/Frameworks/cocos2d-js-v3.2/Parkour/linux-build/CMakeFiles/CMakeTmp'
+Makefile:114: recipe for target 'cmTryCompileExec1068386917/fast' failed
+make[1]: *** [cmTryCompileExec1068386917] Error 1
+make: *** [cmTryCompileExec1068386917/fast] Error 2
+
+File /home/tanjona/Documents/WORKS/Frameworks/cocos2d-js-v3.2/Parkour/linux-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/tanjona/Documents/WORKS/Frameworks/cocos2d-js-v3.2/Parkour/linux-build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1018405380/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1018405380.dir/build.make CMakeFiles/cmTryCompileExec1018405380.dir/build
+make[1]: Entering directory '/home/tanjona/Documents/WORKS/Frameworks/cocos2d-js-v3.2/Parkour/linux-build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/tanjona/Documents/WORKS/Frameworks/cocos2d-js-v3.2/Parkour/linux-build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1018405380.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -std=c99 -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec1018405380.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1018405380
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1018405380.dir/link.txt --verbose=1
+/usr/bin/cc  -std=c99 -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec1018405380.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1018405380 -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTryCompileExec1018405380.dir/build.make:88: recipe for target 'cmTryCompileExec1018405380' failed
+make[1]: Leaving directory '/home/tanjona/Documents/WORKS/Frameworks/cocos2d-js-v3.2/Parkour/linux-build/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec1018405380] Error 1
+Makefile:114: recipe for target 'cmTryCompileExec1018405380/fast' failed
+make: *** [cmTryCompileExec1018405380/fast] Error 2
+
+
